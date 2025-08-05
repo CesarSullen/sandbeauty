@@ -12,6 +12,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: center;
 		gap: 20px;
 
 		@media (max-width: 700px) {
@@ -39,16 +40,19 @@
 	}
 
 	.footer-logo {
-		align-self: flex-start;
+		align-self: center;
 		width: 150px;
+		margin-bottom: 1rem;
+
+		@media screen and (min-width: 700px) {
+			align-self: flex-start;
+		}
 	}
 
 	.footer-description {
 		font-family: "Fraunces", sans-serif;
-		font-size: 0.9rem;
 		line-height: 1.5;
 		margin-bottom: 15px;
-		text-align: left;
 		color: $text-color;
 	}
 
