@@ -55,21 +55,22 @@
 }
 .cta-section {
 	display: flex;
-	flex-direction: column;
 	gap: 0.7rem;
 	width: 100%;
 	margin-top: 3rem;
+	justify-content: center;
 
 	.btn {
-		min-width: 250px;
-		transform: translateY(100%);
+		width: 100%;
+		min-width: 150px;
+		@media screen and (min-width: 700px) {
+			min-width: 200px;
+		}
 	}
 
 	@media screen and (min-width: 700px) {
-		flex-direction: row;
 		margin-top: 0;
 		gap: 1.2rem;
-		@include flex-center();
 	}
 }
 
