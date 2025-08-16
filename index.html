@@ -3,8 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta property="og:title" content="Beauty Saloon" />
-		<meta property="og:description" content="Glamour at 100%" />
+		<meta property="og:title" content="Sand Beauty Salon" />
+		<meta
+			property="og:description"
+			content="Elevate your beauty with Sand Beauty Studio's premium services."
+		/>
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="./assets/icons/logo.png" />
 		<link rel="icon" type="image/png" href="./assets/icons/logo.png" />
@@ -35,10 +38,7 @@
 					<a href="#services" class="nav-link"><p>Services</p></a>
 				</li>
 				<li>
-					<a href="#products" class="nav-link"><p>Products</p></a>
-				</li>
-				<li>
-					<a href="#contact" class="nav-link"><p>Contact</p></a>
+					<a href="#location-hours" class="nav-link"><p>Location</p></a>
 				</li>
 			</ul>
 			<div id="side-bar" class="side-bar">
@@ -50,10 +50,7 @@
 						<a href="#services" class="side-bar-link"><p>Services</p></a>
 					</li>
 					<li>
-						<a href="#products" class="side-bar-link"><p>Products</p></a>
-					</li>
-					<li>
-						<a href="#contact" class="side-bar-link"><p>Contact</p></a>
+						<a href="#location-hours" class="side-bar-link"><p>Location</p></a>
 					</li>
 				</ul>
 				<hr />
@@ -76,15 +73,13 @@
 		<!-- Header -->
 		<header id="home" class="header">
 			<div class="header-content">
-				<h1 class="header-title show-up-blur">Sand Beauty Studio</h1>
-				<h3 class="header-subtitle show-up-blur">
+				<h1 class="header-title">Sand Beauty Studio</h1>
+				<h3 class="header-subtitle">
 					Refina tu expresión con precisión, suavidad y estilo
 				</h3>
 				<div class="cta-section">
-					<a href="#"><button class="btn show-up-blur">lorem ipsum</button></a>
-					<a href="#"
-						><button class="btn ghost-btn show-up-blur">lorem ipsum</button></a
-					>
+					<a href="#"><button class="btn">lorem ipsum</button></a>
+					<a href="#"><button class="btn ghost-btn">lorem ipsum</button></a>
 				</div>
 			</div>
 		</header>
@@ -99,29 +94,52 @@
 				<div class="why-us-container">
 					<div class="reason">
 						<div class="card-content">
-							<img src="./assets/icons/sparkle.svg" class="reason-icon" />
-							<h3>Unique Shine</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<div class="card-header">
+								<h3>Unique Shine</h3>
+								<img
+									src="./assets/icons/shooting-star-fill.svg"
+									class="reason-icon"
+								/>
+							</div>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Delectus necessitatibus debitis ipsam earum enim nisi, rem totam
+								sed.
+							</p>
 						</div>
 					</div>
 					<div class="reason">
 						<div class="card-content">
-							<img src="./assets/icons/sun-horizon.svg" class="reason-icon" />
-							<h3>Radiant Look</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<div class="card-header">
+								<h3>Radiant Look</h3>
+								<img src="./assets/icons/plant-fill.svg" class="reason-icon" />
+							</div>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Delectus necessitatibus debitis ipsam earum enim nisi, rem totam
+								sed.
+							</p>
 						</div>
 					</div>
 					<div class="reason">
 						<div class="card-content">
-							<img src="./assets/icons/heart.svg" class="reason-icon" />
-							<h3>Total Harmony</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<div class="card-header">
+								<h3>Total Harmony</h3>
+								<img
+									src="./assets/icons/heart-half-fill.svg"
+									class="reason-icon"
+								/>
+							</div>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Delectus necessitatibus debitis ipsam earum enim nisi, rem totam
+								sed.
+							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Services Section -->
 			<section id="services" class="services">
 				<h2 class="section-title">
 					Services
@@ -129,45 +147,60 @@
 				</h2>
 				<div class="services-container">
 					<div class="service card">
-						<img
-							src="./assets/images/brows-card.png"
-							class="service-image"
-							alt="Brows Services"
-						/>
-						<div class="card-content">
-							<h3>Brows</h3>
-							<ul>
-								<li>Brow Shaping</li>
-								<li>Brow Tinting</li>
-								<li>Brow Lamination</li>
-								<li>Ombré Powder Brows</li>
-							</ul>
+						<div class="card-overlay">
+							<img
+								src="./assets/images/brows-card.png"
+								class="service-image"
+								alt="Brows Services"
+							/>
+							<div class="card-content">
+								<h3>Brows</h3>
+								<div class="services-list">
+									<span class="spark">✦</span>
+									<span>Brow Shaping</span>
+									<span class="spark">✦</span>
+									<span>Brow Tinting</span>
+									<span class="spark">✦</span>
+									<span>Brow Lamination</span>
+									<span class="spark">✦</span>
+									<span>Ombré Powder Brows</span>
+									<span class="spark">✦</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="service card">
-						<img
-							src="./assets/images/lashes-card.png"
-							class="service-image"
-							alt="Lashes Services"
-						/>
-						<div class="card-content">
-							<h3>Lashes</h3>
-							<ul>
-								<li>Lash Lifting</li>
-							</ul>
+						<div class="card-overlay">
+							<img
+								src="./assets/images/lashes-card.png"
+								class="service-image"
+								alt="Lashes Services"
+							/>
+							<div class="card-content">
+								<h3>Lashes</h3>
+								<div class="services-list">
+									<span class="spark">✦</span>
+									<span>Lash Lifting</span>
+									<span class="spark">✦</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="service card">
-						<img
-							src="./assets/images/facial-card.png"
-							class="service-image"
-							alt="Facial Services"
-						/>
-						<div class="card-content">
-							<h3>Facial</h3>
-							<ul>
-								<li>Facial Waxing</li>
-							</ul>
+						<div class="card-overlay">
+							<img
+								src="./assets/images/facial-card.png"
+								class="service-image"
+								alt="Facial Services"
+							/>
+							<div class="card-content">
+								<h3>Facial</h3>
+								<div class="services-list">
+									<span class="spark">✦</span>
+									<span>Facial Waxing</span>
+									<span class="spark">✦</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -287,7 +320,6 @@
 			</section>
 		</div>
 
-		<!-- Footer -->
 		<footer class="footer">
 			<div class="footer-content">
 				<div class="footer-column">
@@ -297,33 +329,32 @@
 						alt="Sand Beauty Logo"
 					/>
 					<p class="footer-description">
-						Glamour at 100%. Elevate your beauty with Sand Beauty Studio's
-						premium services.
+						Elevate your beauty with Sand Beauty Studio's premium services.
 					</p>
 				</div>
 				<div class="footer-column">
 					<h3>Opening Hours</h3>
-					<ul class="opening-hours">
-						<li>
+					<div class="opening-hours">
+						<div class="hours-row">
 							<span>Monday</span><span class="open">10:00 AM - 7:00 PM</span>
-						</li>
-						<li>
+						</div>
+						<div class="hours-row">
 							<span>Tuesday</span><span class="open">10:00 AM - 7:00 PM</span>
-						</li>
-						<li>
+						</div>
+						<div class="hours-row">
 							<span>Wednesday</span><span class="open">10:00 AM - 7:00 PM</span>
-						</li>
-						<li>
+						</div>
+						<div class="hours-row">
 							<span>Thursday</span><span class="open">10:00 AM - 7:00 PM</span>
-						</li>
-						<li>
+						</div>
+						<div class="hours-row">
 							<span>Friday</span><span class="open">10:00 AM - 7:00 PM</span>
-						</li>
-						<li>
+						</div>
+						<div class="hours-row">
 							<span>Saturday</span><span class="open">10:00 AM - 5:00 PM</span>
-						</li>
-						<li><span>Sunday</span><span>Closed</span></li>
-					</ul>
+						</div>
+						<div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+					</div>
 				</div>
 				<div class="footer-column">
 					<h3>Contact Us</h3>
@@ -357,17 +388,17 @@
 						Phone: <a href="tel:+13057966201">(305) 796-6201</a>
 					</p>
 				</div>
-				<div class="footer-bottom">
-					<a href="https://SynthOcean.com" target="_blank">
-						<p>Powered by <span class="bold">SynthOcean</span>.</p>
-						<img
-							src="./assets/icons/so-white-color.svg"
-							class="so-logo"
-							alt="SynthOcean Logo"
-						/>
-					</a>
-					<p class="copyright">© 2025 Sand Beauty. All rights reserved.</p>
-				</div>
+			</div>
+			<div class="footer-bottom">
+				<a href="https://SynthOcean.com" target="_blank">
+					<p>Powered by <span class="bold">SynthOcean</span>.</p>
+					<img
+						src="./assets/icons/so-white-color.svg"
+						class="so-logo"
+						alt="SynthOcean Logo"
+					/>
+				</a>
+				<p class="copyright">© 2025 Sand Beauty. All rights reserved.</p>
 			</div>
 		</footer>
 

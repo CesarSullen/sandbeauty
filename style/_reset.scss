@@ -174,11 +174,6 @@ section {
 		transition: opacity 0.3s ease;
 	}
 
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 4px 20px rgba($primary-color, 0.5);
-	}
-
 	&:hover::before,
 	&:hover::after {
 		opacity: 1;

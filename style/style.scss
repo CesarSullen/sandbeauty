@@ -39,7 +39,6 @@
 .header-title {
 	color: $light-color;
 	font-size: 3rem;
-	opacity: 0;
 	font-family: "Fraunces";
 	letter-spacing: 2px;
 
@@ -49,23 +48,18 @@
 	}
 }
 .header-subtitle {
-	@include animation-delay(0.3s);
 	letter-spacing: 1px;
 	color: $light-color;
 }
 .cta-section {
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.7rem;
 	width: 100%;
 	margin-top: 3rem;
 
 	.btn {
 		min-width: 250px;
-		@include animation-delay(0.4s);
-	}
-	.ghost-btn {
-		@include animation-delay(0.5s);
 	}
 
 	@media screen and (min-width: 700px) {
@@ -91,18 +85,22 @@
 .reason {
 	text-align: left;
 	color: $text-color;
+	background: linear-gradient(
+		to bottom right,
+		$secondary-color,
+		$primary-color
+	);
+	border: solid 2px $primary-color;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	.reason-icon {
-		width: 50px;
-	}
+	padding: 1.3rem;
+	border-radius: $border-radius-rounded;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 
-	h3 {
-		font-size: 1.4rem;
-		color: $text-color;
-		text-transform: uppercase;
-		letter-spacing: 1px;
+	&:hover {
+		transform: scale(1.02) translateY(-5px);
+		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 	}
 
 	p {
@@ -116,14 +114,33 @@
 	}
 }
 
-// Servicios
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+
+	h3 {
+		font-size: 1.4rem;
+		color: $text-color;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-family: "Fraunces";
+	}
+}
+
+.reason-icon {
+	width: 35px;
+}
+
+// Services
 .services {
 	width: 100%;
 	max-width: none;
 	background-color: $primary-color;
-	margin-bottom: 0;
 	padding-block: 2rem;
 }
+
 .services-container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -139,45 +156,68 @@
 	.service {
 		width: 100%;
 		border-radius: $border-radius-rounded;
-		text-align: left;
+		border: solid 2px $primary-color;
 		background-color: $light-color;
+		overflow: hidden;
+		position: relative;
+		max-width: 320px;
 
-		@media screen and (min-width: 700px) {
-			max-width: 300px;
-		}
-		.service-image {
+		.card-overlay {
+			position: relative;
 			width: 100%;
 			aspect-ratio: 4/3;
-			object-fit: cover;
+
+			.service-image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.card-content {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 1rem;
+				text-align: center;
+				background: linear-gradient(
+					to top,
+					rgba($primary-color, 0.9),
+					rgba($primary-color, 0.7) 50%,
+					transparent
+				);
+
+				h3 {
+					font-size: 1.5rem;
+					color: $text-color;
+					text-transform: uppercase;
+					letter-spacing: 1.5px;
+					font-family: "Fraunces";
+					margin-bottom: 0.5rem;
+				}
+
+				.services-list {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 0.5rem;
+					color: $text-color;
+					font-size: 0.9rem;
+
+					.spark {
+						color: $text-color;
+						font-size: 0.8rem;
+					}
+				}
+			}
 		}
 
 		&:hover {
 			transform: scale(1.03);
-			box-shadow: 0 5px 25px rgba($primary-color, 0.35);
-		}
-
-		.card-content {
-			padding: 1rem;
-		}
-
-		h3 {
-			font-size: 1.5rem;
-			color: $text-color;
-			text-transform: uppercase;
-			letter-spacing: 1.5px;
-			text-align: center;
-			font-family: "Fraunces";
-		}
-
-		ul {
-			color: $text-color;
-			line-height: 1.8;
-
-			li:before {
-				content: "✦";
-				margin-right: 5px;
-				font-size: 0.9rem;
-			}
+			box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 		}
 	}
 }
@@ -276,6 +316,20 @@
 	}
 }
 
+// Instagram Preview
+.instagram-preview {
+	width: 100%;
+	background-color: $primary-color;
+	padding-block: 2rem;
+}
+
+.instagram-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+}
 // Location & Hours
 .location-hours {
 	width: 100%;
@@ -328,10 +382,10 @@
 					margin-top: 1rem;
 					width: 100%;
 					max-width: 300px;
-					border: solid 2px $primary-color;
-					color: $primary-color;
+					border: solid 2px $text-color;
+					color: $text-color;
 					&:hover {
-						background: $primary-color;
+						background: $text-color;
 						color: $light-color;
 					}
 				}
