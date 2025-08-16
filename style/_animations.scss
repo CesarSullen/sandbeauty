@@ -1,23 +1,12 @@
-.blur-in {
-	animation: blurIn 1.5s forwards;
-}
-@keyframes blurIn {
-	0% {
-		filter: blur(0px);
-	}
-	to {
-		filter: blur(8px);
-	}
+.show-up {
+	animation: showUp 1s forwards;
 }
 
-@keyframes pulse {
+@keyframes showUp {
 	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(1.2);
+		transform: translateY(100%);
 	}
 	100% {
-		transform: scale(1);
+		transform: translateY(0%);
 	}
 }

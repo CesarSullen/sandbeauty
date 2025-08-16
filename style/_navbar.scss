@@ -3,7 +3,7 @@
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	padding: 0.5rem 1rem;
+	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -33,7 +33,7 @@
 }
 .nav-title {
 	color: $text-color;
-	font-size: 1.3rem;
+	font-size: 1.8rem;
 	font-family: "Fraunces";
 }
 .nav-links {
@@ -108,7 +108,6 @@
 	display: flex;
 	gap: 10px;
 	align-items: center;
-	color: whitesmoke;
 	font-size: 1.5rem;
 	&:hover {
 		color: $primary-color;
