@@ -570,7 +570,6 @@ section h2 {
 .services {
   width: 100%;
   max-width: none;
-  padding-block: 2rem;
   background-color: #9e9494;
 }
 
@@ -590,7 +589,6 @@ section h2 {
 
 .service {
   width: 100%;
-  max-width: 320px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -601,6 +599,11 @@ section h2 {
 .service:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 700px) {
+  .service {
+    max-width: 320px;
+  }
 }
 
 .card-overlay {
