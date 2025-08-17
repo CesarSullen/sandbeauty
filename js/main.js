@@ -14,11 +14,9 @@ function toggleMenu() {
 		sideBar.style.transform === "translateX(-200%)" ||
 		sideBar.style.transform === ""
 	) {
-		headerTitle.style.color = "#c8c5ba";
 		sideBar.style.transform = "translateX(0px)";
 		body.style.overflowY = "hidden";
 	} else {
-		headerTitle.style.color = "#665b55";
 		sideBar.style.transform = "translateX(-200%)";
 		body.style.overflowY = "auto";
 	}

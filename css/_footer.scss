@@ -4,7 +4,7 @@
 		$primary-color 0%,
 		darken($primary-color, 10%) 100%
 	);
-	color: $text-color;
+	color: $light-color;
 	padding: 3rem 1.5rem;
 	text-align: center;
 	font-family: "Fraunces", serif;
@@ -27,7 +27,6 @@
 		h3 {
 			font-size: 1.4rem;
 			margin-bottom: 1rem;
-			color: $light-color;
 			text-transform: uppercase;
 			letter-spacing: 1.2px;
 		}
@@ -47,7 +46,6 @@
 	.footer-description {
 		font-size: 0.95rem;
 		line-height: 1.6;
-		color: lighten($text-color, 10%);
 		max-width: 200px;
 	}
 
@@ -70,12 +68,7 @@
 				background: rgba($light-color, 0.2);
 			}
 
-			span:first-child {
-				color: $text-color;
-			}
-
 			.open {
-				color: $light-color;
 				font-weight: 500;
 			}
 		}
