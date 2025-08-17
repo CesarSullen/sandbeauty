@@ -494,7 +494,7 @@ section h2 {
 }
 
 .header {
-  height: 80vh;
+  height: 80dvh;
   background-image: url(../assets/header.jpg);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
@@ -589,7 +589,7 @@ section h2 {
 
 .service {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -621,10 +621,9 @@ section h2 {
   position: absolute;
   inset: 0;
   z-index: 0;
-  transition: transform 0.5s ease;
 }
 .service:hover .card-overlay .service-image {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 .card-overlay .card-content {
   position: relative;
@@ -876,27 +875,5 @@ section h2 {
   border-bottom: 1px solid rgba(158, 148, 148, 0.1);
   font-weight: 600;
 }
-
-/* .footer {
-	background: $primary-color;
-	color: whitesmoke;
-	padding: 20px;
-	text-align: center;
-	padding-block: 20vh;
-	width: 100%;
-	box-sizing: border-box;
-
-	.social-media {
-		margin-top: 10px;
-		a {
-			margin: 0 10px;
-
-			.social-link {
-				width: 35px;
-			}
-		}
-	}
-}
- */
 
 /*# sourceMappingURL=style.css.map */

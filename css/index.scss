@@ -17,7 +17,7 @@
 
 // Header
 .header {
-	height: 80vh;
+	height: 80dvh;
 	background-image: url(../assets/header.jpg);
 	background-color: rgba(0, 0, 0, 0.5);
 	background-blend-mode: multiply;
@@ -104,7 +104,7 @@
 
 .service {
 	width: 100%;
-	border-radius: 20px;
+	border-radius: $border-radius-rounded;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -135,10 +135,9 @@
 		position: absolute;
 		inset: 0;
 		z-index: 0;
-		transition: transform 0.5s ease;
 
 		.service:hover & {
-			transform: scale(1.05);
+			transform: scale(1.2);
 		}
 	}
 
@@ -397,26 +396,3 @@
 		}
 	}
 }
-
-// Footer
-/* .footer {
-	background: $primary-color;
-	color: whitesmoke;
-	padding: 20px;
-	text-align: center;
-	padding-block: 20vh;
-	width: 100%;
-	box-sizing: border-box;
-
-	.social-media {
-		margin-top: 10px;
-		a {
-			margin: 0 10px;
-
-			.social-link {
-				width: 35px;
-			}
-		}
-	}
-}
- */
