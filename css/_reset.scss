@@ -7,7 +7,7 @@
 	transition: all 0.3s;
 	list-style: none;
 	text-decoration: none;
-	font-family: "Inter";
+	font-family: "Raleway";
 }
 
 // Variables
@@ -21,13 +21,13 @@ $border-general: solid 1px rgba($primary-color, 0.4);
 
 // Typography
 @font-face {
-	font-family: "Fraunces";
-	src: url("../typography/Fraunces-Regular.ttf") format("truetype");
+	font-family: "CormorantGaramond";
+	src: url("../typography/CormorantGaramond-Regular.ttf") format("truetype");
 	font-weight: 400;
 }
 @font-face {
-	font-family: "Inter";
-	src: url("../typography/Inter-Regular.ttf") format("truetype");
+	font-family: "Raleway";
+	src: url("../typography/Raleway-Regular.ttf") format("truetype");
 	font-weight: 400;
 }
 
@@ -81,7 +81,7 @@ a {
 	border: solid 2px $light-color;
 	background: $light-color;
 	font-size: 1rem;
-	cursor: pointer;
+	cursor: poRaleway;
 	width: 100%;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -112,7 +112,7 @@ a {
 	&:hover:after {
 		width: 300px;
 		height: 300px;
-		pointer-events: none;
+		poraleway-events: none;
 	}
 	&:hover {
 		translate: 0px -5px;
@@ -165,7 +165,7 @@ section {
 		right: 10px;
 		font-size: 8rem;
 		color: rgba($primary-color, 0.1);
-		pointer-events: none;
+		poraleway-events: none;
 		line-height: 1;
 		transform: translateY(25%);
 		z-index: -1;
@@ -183,7 +183,7 @@ section {
 	color: $text-color;
 	text-transform: uppercase;
 	font-size: 2.5rem;
-	font-family: "Fraunces";
+	font-family: "CormorantGaramond";
 	letter-spacing: 2px;
 	width: 100%;
 

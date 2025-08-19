@@ -8,17 +8,17 @@
   transition: all 0.3s;
   list-style: none;
   text-decoration: none;
-  font-family: "Inter";
+  font-family: "Raleway";
 }
 
 @font-face {
-  font-family: "Fraunces";
-  src: url("../typography/Fraunces-Regular.ttf") format("truetype");
+  font-family: "CormorantGaramond";
+  src: url("../typography/CormorantGaramond-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("../typography/Inter-Regular.ttf") format("truetype");
+  font-family: "Raleway";
+  src: url("../typography/Raleway-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 .green-text {
@@ -82,7 +82,7 @@ a {
   border: solid 2px #f5efef;
   background: #f5efef;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: poRaleway;
   width: 100%;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -111,7 +111,7 @@ a {
 .btn:hover:after {
   width: 300px;
   height: 300px;
-  pointer-events: none;
+  poraleway-events: none;
 }
 .btn:hover {
   translate: 0px -5px;
@@ -162,7 +162,7 @@ section h2 {
   right: 10px;
   font-size: 8rem;
   color: rgba(158, 148, 148, 0.1);
-  pointer-events: none;
+  poraleway-events: none;
   line-height: 1;
   transform: translateY(25%);
   z-index: -1;
@@ -177,7 +177,7 @@ section h2 {
   color: #333333;
   text-transform: uppercase;
   font-size: 2.5rem;
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
   letter-spacing: 2px;
   width: 100%;
 }
@@ -248,7 +248,7 @@ section h2 {
 .nav-title {
   color: #333333;
   font-size: 1.8rem;
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
 }
 
 .nav-links {
@@ -380,7 +380,7 @@ section h2 {
   color: #f5efef;
   padding: 3rem 1.5rem;
   text-align: center;
-  font-family: "Fraunces", serif;
+  font-family: "CormorantGaramond", serif;
 }
 .footer .footer-content {
   max-width: 1200px;
@@ -520,7 +520,7 @@ section h2 {
 .header-title {
   color: #f5efef;
   font-size: 3rem;
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
   letter-spacing: 2px;
   transform: translateY(100%);
 }
@@ -639,7 +639,7 @@ section h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
 }
 .card-overlay .card-content .services-list {
   display: flex;
@@ -697,7 +697,7 @@ section h2 {
   color: #333333;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
 }
 
 .reason-icon {
@@ -743,7 +743,7 @@ section h2 {
   gap: 2rem;
 }
 .about-us-text .section-title {
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
   font-size: 2.5rem;
   border-bottom: 2px solid #333333;
   padding-bottom: 0.5rem;
@@ -761,7 +761,7 @@ section h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: "Fraunces";
+  font-family: "CormorantGaramond";
   font-size: 1.2rem;
   color: #333333;
   text-decoration: none;
