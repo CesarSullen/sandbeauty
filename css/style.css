@@ -1,4 +1,23 @@
 @charset "UTF-8";
+/* =====================
+   VARIABLES
+===================== */
+/* =====================
+   TYPOGRAPHY
+===================== */
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url("../typography/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../typography/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+/* =====================
+   RESET & BASE STYLES
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -11,16 +30,22 @@
   font-family: "Raleway";
 }
 
-@font-face {
-  font-family: "CormorantGaramond";
-  src: url("../typography/CormorantGaramond-Regular.ttf") format("truetype");
-  font-weight: 400;
+body {
+  background-color: #f5efef;
+  overflow-x: hidden;
 }
-@font-face {
-  font-family: "Raleway";
-  src: url("../typography/Raleway-Regular.ttf") format("truetype");
-  font-weight: 400;
+
+a {
+  color: #333333;
+  text-decoration: none;
 }
+
+/* =====================
+   MIXINS
+===================== */
+/* =====================
+   UTILITIES
+===================== */
 .green-text {
   color: rgb(22, 148, 22);
 }
@@ -61,28 +86,16 @@ hr {
   height: 2px;
 }
 
-body {
-  background-color: #f5efef;
-  overflow-x: hidden;
-}
-
-.body-content {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-}
-
-a {
-  color: #333333;
-}
-
+/* =====================
+   BUTTONS
+===================== */
 .btn {
   padding: 0.7rem 1.6rem;
   border-radius: 8px;
   border: solid 2px #f5efef;
   background: #f5efef;
   font-size: 1rem;
-  cursor: poRaleway;
+  cursor: pointer;
   width: 100%;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -91,10 +104,6 @@ a {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-}
-.btn:active {
-  transform: scale(0.95);
-  box-shadow: none;
 }
 .btn:after {
   content: "";
@@ -111,10 +120,14 @@ a {
 .btn:hover:after {
   width: 300px;
   height: 300px;
-  poraleway-events: none;
+  pointer-events: none;
 }
 .btn:hover {
   translate: 0px -5px;
+}
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 .ghost-btn {
@@ -132,6 +145,15 @@ a {
 .ghost-btn:active {
   transform: scale(0.95);
   box-shadow: none;
+}
+
+/* =====================
+   LAYOUT UTILITIES
+===================== */
+.body-content {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
 }
 
 section {
@@ -162,14 +184,14 @@ section h2 {
   right: 10px;
   font-size: 8rem;
   color: rgba(158, 148, 148, 0.1);
-  poraleway-events: none;
+  pointer-events: none;
   line-height: 1;
   transform: translateY(25%);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.card:hover::before, .card:hover::after {
+.card:hover::after {
   opacity: 1;
 }
 
@@ -180,6 +202,7 @@ section h2 {
   font-family: "CormorantGaramond";
   letter-spacing: 2px;
   width: 100%;
+  text-align: center;
 }
 .section-title .styled-underline {
   display: block;
@@ -345,7 +368,7 @@ section h2 {
 .toggle-btn {
   background: none;
   display: flex;
-  cursor: pointer;
+  cursor: poRaleway;
   flex-direction: column;
   justify-content: space-around;
   width: 35px;
@@ -491,6 +514,30 @@ section h2 {
 .footer .footer-bottom .copyright {
   font-size: 0.85rem;
   color: #666666;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background-color: #9e9494;
+  border-radius: 100dvh;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.floating-btn img {
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 700px) {
+  .floating-btn {
+    display: none;
+  }
 }
 
 .header {
@@ -797,83 +844,143 @@ section h2 {
   }
 }
 
+.before-after-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .before-after-container {
+    flex-direction: row;
+  }
+}
+
+.comparison {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.comparison .card-content h3 {
+  font-family: "CormorantGaramond";
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+.comparison .card-content .description {
+  font-size: 0.9rem;
+  color: #9e9494;
+  text-wrap: nowrap;
+}
+.comparison:hover .image-wrapper .before-image {
+  width: 30%;
+}
+.comparison:hover .image-wrapper .after-image {
+  width: 70%;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5/4;
+  overflow: hidden;
+}
+.image-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.image-wrapper .before-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-right: solid 1px rgba(158, 148, 148, 0.4);
+}
+.image-wrapper .after-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .location-hours {
   width: 100%;
+  overflow-x: hidden;
 }
-.location-hours .location-hours-container {
+
+.location-hours-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 25px;
   justify-items: center;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  border-radius: 8px;
 }
 @media screen and (min-width: 700px) {
-  .location-hours .location-hours-container {
+  .location-hours-container {
     padding: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.location-hours .location-hours-container .location-card,
-.location-hours .location-hours-container .hours-card {
+
+.location-container,
+.hours-container {
   width: 100%;
-  box-sizing: border-box;
-  color: #333333;
-  box-shadow: none;
-  border: none;
-}
-.location-hours .location-hours-container .location-card .card-content,
-.location-hours .location-hours-container .hours-card .card-content {
-  text-align: left;
-  padding: 1.5rem;
-}
-.location-hours .location-hours-container .location-card .card-content div,
-.location-hours .location-hours-container .hours-card .card-content div {
-  display: flex;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
-.location-hours .location-hours-container .location-card .card-content h3,
-.location-hours .location-hours-container .hours-card .card-content h3 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.location-hours .location-hours-container .location-card .card-content img,
-.location-hours .location-hours-container .hours-card .card-content img {
-  width: 25px;
-  margin-right: 1rem;
-}
-.location-hours .location-hours-container .location-card .card-content p,
-.location-hours .location-hours-container .location-card .card-content a,
-.location-hours .location-hours-container .hours-card .card-content p,
-.location-hours .location-hours-container .hours-card .card-content a {
-  font-size: 1rem;
   color: #333333;
 }
-.location-hours .location-hours-container .location-card .card-content .ghost-btn,
-.location-hours .location-hours-container .hours-card .card-content .ghost-btn {
-  margin-top: 1rem;
-  width: 100%;
-  max-width: 300px;
-  border: solid 2px #333333;
-  color: #333333;
-}
-.location-hours .location-hours-container .location-card .card-content .ghost-btn:hover,
-.location-hours .location-hours-container .hours-card .card-content .ghost-btn:hover {
-  background: #333333;
-  color: #f5efef;
-}
-.location-hours .location-hours-container .hours-card .hours-list {
-  list-style: none;
-}
-.location-hours .location-hours-container .hours-card .hours-list li {
+
+.hours-container .hours-list li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(158, 148, 148, 0.1);
   font-weight: 600;
+}
+
+.location-hours-content {
+  text-align: left;
+  padding: 1.5rem;
+}
+.location-hours-content div {
+  display: flex;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.location-hours-content h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.location-hours-content img {
+  width: 25px;
+  margin-right: 1rem;
+}
+.location-hours-content p,
+.location-hours-content a {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.location-map {
+  width: 100%;
+  aspect-ratio: 5/3;
+  border-radius: 8px;
+  border: 3px solid #9e9494;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 700px) {
+  .location-map {
+    aspect-ratio: unset;
+  }
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -70,6 +70,11 @@
 				</div>
 			</div>
 		</nav>
+
+		<a href="https://wa.me/12345678" class="floating-btn" target="_blank">
+			<img src="./assets/icons/chat-circle-dots-bold.svg" />
+		</a>
+
 		<!-- Header -->
 		<header id="home" class="header">
 			<div class="header-content">
@@ -243,6 +248,79 @@
 				</div>
 			</section>
 
+			<!-- Before & After -->
+			<section id="before-after" class="before-after">
+				<h2 class="section-title">
+					Before & After
+					<img
+						class="styled-underline"
+						src="./assets/styled-underline.svg"
+						alt="styled underline"
+					/>
+				</h2>
+
+				<div class="before-after-container">
+					<div class="comparison card">
+						<div class="image-wrapper">
+							<img
+								src="./assets/images/brows-card.png"
+								alt="Brows before treatment"
+								class="before-image"
+							/>
+							<img
+								src="./assets/images/brows-card.png"
+								alt="Brows after treatment"
+								class="after-image"
+							/>
+						</div>
+						<div class="card-content">
+							<h3>Brow Transformation</h3>
+							<p class="description">✦ Enhanced shape & natural finish ✦</p>
+						</div>
+					</div>
+
+					<div class="comparison card">
+						<div class="image-wrapper">
+							<img
+								src="./assets/images/lashes-card.png"
+								alt="Lashes before treatment"
+								class="before-image"
+							/>
+							<img
+								src="./assets/images/lashes-card.png"
+								alt="Lashes after treatment"
+								class="after-image"
+							/>
+						</div>
+						<div class="card-content">
+							<h3>Lash Lifting</h3>
+							<p class="description">
+								✦ Natural curl with longer-lasting lift ✦
+							</p>
+						</div>
+					</div>
+
+					<div class="comparison card">
+						<div class="image-wrapper">
+							<img
+								src="./assets/images/facial-card.png"
+								alt="Skin before facial"
+								class="before-image"
+							/>
+							<img
+								src="./assets/images/facial-card.png"
+								alt="Skin after facial"
+								class="after-image"
+							/>
+						</div>
+						<div class="card-content">
+							<h3>Facial Glow</h3>
+							<p class="description">✦ Brighter, smoother & healthier skin ✦</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<!-- Location & Hours Section -->
 			<section id="location-hours" class="location-hours">
 				<h2 class="section-title">
@@ -250,12 +328,16 @@
 					<img class="styled-underline" src="./assets/styled-underline.svg" />
 				</h2>
 				<div class="location-hours-container">
-					<div class="location-card card">
-						<div class="card-content">
+					<div class="location-container">
+						<div class="location-hours-content">
 							<h3>Sand Beauty Studio</h3>
 							<div>
 								<img src="./assets/icons/map-pin-fill.svg" />
-								<p>10905 SW 40th St, 25, MIAMI, Florida 33165</p>
+								<a
+									href="https://www.google.com/maps/search/?api=1&query=10905+SW+40th+St,+25,+MIAMI,+Florida+33165"
+									target="_blank"
+									>10905 SW 40th St, 25, MIAMI, Florida 33165</a
+								>
 							</div>
 							<div>
 								<img src="./assets/icons/device-mobile-fill.svg" />
@@ -267,16 +349,17 @@
 									>sandbeautystudio13@gmail.com</a
 								>
 							</div>
-							<a
-								href="https://www.google.com/maps/search/?api=1&query=10905+SW+40th+St,+25,+MIAMI,+Florida+33165"
-								target="_blank"
-								class="btn ghost-btn"
-								>Get Directions</a
-							>
+							<div class="location-map">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.1409443291686!2d-80.37199799999999!3d25.7328522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bf51f1f2c381%3A0xbfd859673cd3d579!2s10905%20SW%2040th%20St%20%2325%2C%20Miami%2C%20FL%2033165!5e0!3m2!1ses!2sus!4v1755720178079!5m2!1ses!2sus"
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"
+								></iframe>
+							</div>
 						</div>
 					</div>
-					<div class="hours-card card">
-						<div class="card-content">
+					<div class="hours-container">
+						<div class="location-hours-content">
 							<h3>Hours</h3>
 							<ul class="hours-list">
 								<li>
