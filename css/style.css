@@ -668,9 +668,10 @@ section h2 {
   position: absolute;
   inset: 0;
   z-index: 0;
+  transform: scale(1.2);
 }
 .service:hover .card-overlay .service-image {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 .card-overlay .card-content {
   position: relative;
@@ -709,18 +710,17 @@ section h2 {
 .reason {
   text-align: left;
   color: #333333;
-  background: #c6b9b9;
-  border: solid 0.5px #9e9494;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1.3rem;
   border-radius: 8px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 .reason:hover {
   transform: scale(1.02) translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  background: #c6b9b9;
+  border: solid 0.5px #9e9494;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 .reason p {
   font-size: 0.95rem;
@@ -761,6 +761,7 @@ section h2 {
 .about-us-container {
   max-width: 1200px;
   margin: auto;
+  align-items: center;
 }
 
 .about-us-img {
@@ -779,15 +780,14 @@ section h2 {
 }
 
 .about-us-text {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1.5rem;
-  background-color: #f5efef;
-  color: #333333;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  font-weight: 600;
+  text-align: left;
 }
 .about-us-text .section-title {
   font-family: "CormorantGaramond";
@@ -798,11 +798,17 @@ section h2 {
 @media screen and (min-width: 700px) {
   .about-us-text .section-title {
     font-size: 3rem;
+    text-align: left;
   }
 }
 .about-us-text p {
   font-size: 1.1rem;
   line-height: 1.8;
+}
+@media screen and (min-width: 700px) {
+  .about-us-text p {
+    line-height: 1.5;
+  }
 }
 .about-us-text .social {
   display: flex;
@@ -823,11 +829,6 @@ section h2 {
 @media screen and (min-width: 700px) {
   .about-us-text .social {
     justify-content: left;
-  }
-}
-@media screen and (min-width: 700px) {
-  .about-us-text {
-    text-align: justify;
   }
 }
 
@@ -889,23 +890,18 @@ section h2 {
 .image-wrapper img {
   width: 100%;
   object-fit: cover;
-}
-.image-wrapper .before-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 50%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+.image-wrapper .before-image {
+  left: 0;
   border-right: solid 1px rgba(158, 148, 148, 0.4);
 }
 .image-wrapper .after-image {
-  position: absolute;
-  top: 0;
   right: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .location-hours {
